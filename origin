@@ -1,0 +1,15 @@
+[33mcommit 3ceed0b29e241232add9f5945795c766eff4eabc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mgh-origin/main[m[33m)[m
+Author: SamAdebisi <samadebisi12@gmail.com>
+Date:   Tue Jan 31 18:42:12 2023 +0100
+
+    setup
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex af04837..696c881 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -1,3 +1,4 @@[m
+ .env[m
+ db.sqlite3[m
+ Pipfile.lock[m
+[32m+[m[32m.idea[m
