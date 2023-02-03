@@ -3,6 +3,12 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 
+class CustomUser(AbstractUser):
+    user_type_data = ((1, "HOD"), (2, "Staff"), (3, "Student"))
+    user_type = models.CharField(default=1, choices=user_type_data,
+                                 max_length=10)
+
+
 class AdminHOD(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
