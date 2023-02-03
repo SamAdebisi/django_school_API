@@ -51,6 +51,7 @@ class Students(models.Model):
     course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
 
 
 class Attendance(models.Model):
@@ -59,6 +60,7 @@ class Attendance(models.Model):
     attendance_date = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
+    objects = models.Manager()
 
 
 class AttendanceReport(models.Model):
