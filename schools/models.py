@@ -154,9 +154,6 @@ class Comments(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
 
-    def __str__(self):
-        return self.comment
-
 
 class Events(models.Model):
     id = models.AutoField(primary_key=True)
