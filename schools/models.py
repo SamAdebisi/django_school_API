@@ -50,6 +50,8 @@ class Students(models.Model):
     profile_pic = models.FileField(max_length=255)
     address = models.TextField()
     course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING)
+    session_start_year = models.DateTimeField()
+    session_end_year = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
