@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 
 class AdminHOD(models.Model):
@@ -131,3 +132,16 @@ class NotificationStaff(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
+
+
+class Blogs(models.Model):
+    id = models.AutoField(primary_key=True)
+    author = models.ForeignKey(get_user_model(), on_delete=models.DO_NOTHING)
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = models.Manager()
+
+
+
