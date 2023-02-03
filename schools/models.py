@@ -153,3 +153,20 @@ class Comments(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
+
+    def __str__(self):
+        return self.comment
+
+
+class Events(models.Model):
+    id = models.AutoField(primary_key=True)
+    author = models.ForeignKey(get_user_model(),
+                               related_name="event",
+                               on_delete=models.DO_NOTHING)
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    location = models.CharField(max_length=255)
+    event_date = models.DateField()
+    event_time = models.TimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
