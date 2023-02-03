@@ -53,4 +53,9 @@ class Students(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
 
 
-
+class Attendance(models.Model):
+    id = models.AutoField(primary_key=True)
+    subject_id = models.ForeignKey(Subjects, on_delete=models.DO_NOTHING)
+    attendance_date = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
