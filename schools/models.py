@@ -11,6 +11,7 @@ class CustomUser(AbstractUser):
 
 class AdminHOD(models.Model):
     id = models.AutoField(primary_key=True)
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
