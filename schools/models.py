@@ -97,6 +97,7 @@ class Students(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     password = models.CharField(max_length=255)
+    date_of_birth = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=255)
     profile_pic = models.FileField(max_length=255)
     address = models.TextField()
