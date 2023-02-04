@@ -53,9 +53,6 @@ class CustomUser(AbstractUser):
 class AdminHOD(models.Model):
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
-    password = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
@@ -64,9 +61,6 @@ class AdminHOD(models.Model):
 class Staffs(models.Model):
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
-    password = models.CharField(max_length=255)
     address = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
@@ -94,9 +88,6 @@ class Subjects(models.Model):
 class Students(models.Model):
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
-    password = models.CharField(max_length=255)
     date_of_birth = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=255)
     profile_pic = models.FileField(max_length=255)
