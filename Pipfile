@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 python-dotenv = "*"
 psycopg2 = "*"
+sqlite3database = "*"
 
 [dev-packages]
 
